@@ -86,10 +86,10 @@ public class HttpServer {
     public static String classCommand(String command) throws ClassNotFoundException {
         String salida = "";
         System.out.println("Comando solicitado: " + command);
-        String value = command.split("\\(")[1];
-        value = value.split("\\)")[0];
-        System.out.println("Valor: " + value);
-        Class c = Class.forName(value);
+        String valor = command.split("\\(")[1];
+        valor = valor.split("\\)")[0];
+        System.out.println("Valor: " + valor);
+        Class c = Class.forName(valor);
         Method[] methods = c.getDeclaredMethods();
         Field[] fields = c.getDeclaredFields();
         for(Method method : methods){
@@ -102,10 +102,10 @@ public class HttpServer {
     }
 
     public static String invokeCommand(String command) {
-        String salida = "";
-        String value = command.substring(6, command.length() - 1);
-        String className = value.split(",")[0];
-        String method = value.split(",")[1];
+
+        String valor = command.substring(7, command.length() - 1);
+        String className = valor.split(",")[0];
+        String method = valor.split(",")[1];
         Method methods = null;
 
         try {
@@ -117,9 +117,9 @@ public class HttpServer {
         } catch (SecurityException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String output = "El metodo: " + method + " " + methods;
+        String salida =  " " + methods;
         System.out.println(className);
-        return output;
+        return salida;
     }
 
     public static String unaryCommand(String command) {
