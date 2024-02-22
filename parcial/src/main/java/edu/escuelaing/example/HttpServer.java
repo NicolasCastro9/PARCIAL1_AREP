@@ -85,10 +85,10 @@ public class HttpServer {
 
     public static String classCommand(String command) throws ClassNotFoundException {
         String salida = "";
-        System.out.println("Comando solicitado: " + command);
+        System.out.println(command);
         String valor = command.split("\\(")[1];
         valor = valor.split("\\)")[0];
-        System.out.println("Valor: " + valor);
+        System.out.println(valor);
         Class c = Class.forName(valor);
         Method[] methods = c.getDeclaredMethods();
         Field[] fields = c.getDeclaredFields();
@@ -123,11 +123,11 @@ public class HttpServer {
     }
 
     public static String unaryCommand(String command) {
-        return "me falta";
+        return "me falta :(";
     }
 
     public static String binaryInvokeCommand(String command) {
-        return "me falta";
+        return "me falta :(";
     }
 
     public static String index() {

@@ -13,7 +13,7 @@ public class Respond {
                 + "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
                 + "    </head>\n"
                 + "    <body>\n"
-                + "        <h1>Form with GET</h1>\n"
+                + "        <h1>CONSULTA CHATGPT GET</h1>\n"
                 + "        <form action=\"/consulta\">\n"
                 + "            <label for=\"name\">Name:</label><br>\n"
                 + "            <input type=\"text\" id=\"name\" name=\"comando\" value=\"John\"><br><br>\n"

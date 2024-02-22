@@ -9,7 +9,7 @@ import java.net.URL;
 public class ClienteWeb {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String GET_URL = "http://localhost:36000";
+    private static final String GET_URL = "http://localhost:36000/cliente";
 
     public static void main(String[] args) throws IOException {
 
