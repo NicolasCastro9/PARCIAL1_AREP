@@ -102,24 +102,7 @@ public class HttpServer {
     }
 
     public static String invokeCommand(String command) {
-
-        String valor = command.substring(7, command.length() - 1);
-        String className = valor.split(",")[0];
-        String method = valor.split(",")[1];
-        Method methods = null;
-
-        try {
-            try {
-                methods = Class.forName(className).getDeclaredMethod(method);
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
-            }
-        } catch (SecurityException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        String salida =  " " + methods;
-        System.out.println(className);
-        return salida;
+        return "me falta :(";
     }
 
     public static String unaryCommand(String command) {
